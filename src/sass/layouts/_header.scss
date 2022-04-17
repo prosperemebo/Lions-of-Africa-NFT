@@ -1,0 +1,145 @@
+.header {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  position: relative;
+
+  @include respond(tab-land) {
+    margin-bottom: 5rem;
+  }
+
+  .text-box {
+    padding: 2rem;
+    max-width: 70rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    small {
+      display: block;
+      animation: fade-in 1s $bezier-curve backwards;
+    }
+
+    h1 {
+      animation: fade-in 1.5s $bezier-curve backwards;
+
+      span {
+        color: $color-grey-3;
+      }
+    }
+
+    p {
+      animation: fade-in 1.7s $bezier-curve backwards;
+    }
+
+    a {
+      animation: fade-in 2s $bezier-curve backwards;
+    }
+  }
+
+  .bg-art {
+    img {
+      width: 6rem;
+      position: absolute;
+      animation: drop-in 1s $bezier-curve 0.1s backwards;
+
+      &.img1 {
+        left: 15%;
+        top: 7%;
+        animation-duration: 1.3s;
+      }
+
+      &.img2 {
+        left: 7%;
+        top: 80%;
+        animation-duration: 1.5s;
+      }
+
+      &.img3 {
+        right: 15%;
+        top: 25%;
+        animation-duration: 1.2s;
+      }
+
+      &.img4 {
+        right: 7%;
+        top: 90%;
+        animation-duration: 1.6s;
+      }
+
+      &.img5 {
+        left: 18%;
+        top: 90%;
+        animation-duration: 1.1s;
+      }
+
+      &.img6 {
+        width: 4rem;
+        right: 28%;
+        top: 0%;
+      }
+
+      @include respond(tab-port) {
+        &.img1 {
+          left: 3%;
+          top: 15%;
+        }
+
+        &.img2 {
+          left: 0%;
+          top: 80%;
+        }
+
+        &.img3 {
+          right: 3%;
+          top: 30%;
+        }
+
+        &.img4 {
+          right: 3%;
+          top: 100%;
+        }
+
+        &.img5 {
+          left: 15%;
+          top: 100%;
+          width: 4rem;
+        }
+
+        &.img6 {
+          width: 3rem;
+          right: 20%;
+          top: 15%;
+        }
+      }
+    }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 40rem;
+
+  @include respond(tab-land) {
+    height: 30rem;
+  }
+}
+
+.swiper-slide {
+  width: 67rem;
+  border-radius: 3rem;
+  overflow: hidden;
+
+  @include respond(tab-land) {
+    width: 50rem;
+  }
+
+  @include respond(phone) {
+    width: 95%;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

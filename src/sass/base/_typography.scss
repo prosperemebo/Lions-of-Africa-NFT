@@ -1,0 +1,64 @@
+body {
+  font-family: $primary-font;
+  font-weight: 400;
+  /* font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-grey-1;
+}
+
+.headline-1 {
+  font-weight: 500;
+  font-size: 6.4rem;
+  line-height: 1.4;
+
+  @include respond(tab-port) {
+    font-size: 5rem;
+  }
+}
+
+.headline-1-5 {
+  font-weight: 700;
+  font-size: 4.2rem;
+  // line-height: 50px;
+}
+
+.headline-2 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 41px;
+}
+
+.headline-4 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 36px;
+}
+
+.headline-5 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.body-1 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.body-2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.subtitle-1 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.subtitle-2 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+}
