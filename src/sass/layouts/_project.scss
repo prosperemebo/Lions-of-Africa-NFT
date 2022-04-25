@@ -1,0 +1,25 @@
+.project {
+  background-color: $color-secondary;
+  color: $color-primary;
+  padding: 8rem 0;
+  position: relative;
+
+  .headline-1 {
+    text-transform: uppercase;
+  }
+
+  .sparkles {
+    position: absolute;
+    z-index: 100;
+
+    // &.spak-1 {
+    //   right: 0;
+    //   top: 0;
+    // }
+
+    &.spak-2 {
+      top: 30%;
+      left: 5%;
+    }
+  }
+}
