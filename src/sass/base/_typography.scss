@@ -44,6 +44,10 @@ body {
 .body-2 {
   font-weight: 400;
   font-size: 1.8rem;
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+  }
 }
 
 .subtitle-1 {

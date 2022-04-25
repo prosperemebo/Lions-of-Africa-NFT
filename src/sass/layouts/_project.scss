@@ -1,10 +1,25 @@
 .project {
   background-color: $color-secondary;
   color: $color-primary;
-  padding: 8rem 0;
+  padding: 8rem 0 0;
   position: relative;
+  overflow: hidden;
 
   .headline-1 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .desc {
+    width: 80%;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      width: 85%;
+    }
+  }
+
+  .subtitle-2 {
     text-transform: uppercase;
   }
 
@@ -12,14 +27,25 @@
     position: absolute;
     z-index: 100;
 
-    // &.spak-1 {
-    //   right: 0;
-    //   top: 0;
-    // }
+    &.spak-1 {
+      top: -8%;
+      left: -5%;
+    }
 
     &.spak-2 {
-      top: 30%;
-      left: 5%;
+      top: -5%;
+      right: -5%;
     }
+
+    @include respond(tab-port) {
+      //   img {
+      //     width: ;
+      //   }
+    }
+  }
+
+  .project-gif {
+    margin-top: 10rem;
+    width: 100%;
   }
 }
