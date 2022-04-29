@@ -13,9 +13,11 @@
   .desc {
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 
     @include respond(phone) {
       width: 85%;
+      text-align: left;
     }
   }
 
@@ -38,14 +40,25 @@
     }
 
     @include respond(tab-port) {
-      //   img {
-      //     width: ;
-      //   }
+      img {
+        width: 25rem;
+      }
+
+      &.spak-1 {
+        top: -12%;
+        left: -10%;
+      }
+
+      &.spak-2 {
+        top: -8%;
+        right: -10%;
+      }
     }
   }
 
   .project-gif {
     margin-top: 10rem;
     width: 100%;
+    display: block;
   }
 }

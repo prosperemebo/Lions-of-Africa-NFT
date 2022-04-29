@@ -1,7 +1,110 @@
-.description {
+.description-overview {
   max-width: 120rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20rem;
+  margin-top: 15rem;
   padding: 0 5rem;
+  text-align: center;
+
+  @include respond(phone) {
+    text-align: left;
+  }
+}
+
+.utilities-section {
+  background-color: $color-pink;
+  padding: 15rem 0;
+  position: relative;
+
+  .headline-1 {
+    text-transform: uppercase;
+  }
+
+  .vectors {
+    img {
+      position: absolute;
+
+      &.vec-1 {
+        top: 10%;
+        left: 5%;
+
+        @include respond(phone) {
+          top: 5%;
+        }
+      }
+
+      &.vec-2 {
+        bottom: 5%;
+        right: 8%;
+
+        @include respond(phone) {
+          bottom: 3%;
+          right: 5%;
+        }
+      }
+
+      @include respond(phone) {
+        width: 5rem;
+      }
+    }
+  }
+
+  .utilities {
+    width: 80%;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      width: 85%;
+      text-align: left;
+    }
+
+    .utility {
+      margin: 2.5rem 0;
+    }
+  }
+}
+
+.community-section {
+  background-color: $color-secondary;
+  color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  .description {
+    padding: 15rem 0;
+    margin-right: 5rem;
+    margin-left: 10rem;
+
+    @include respond(tab-port) {
+      padding: 10rem 0;
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .headline-2 {
+      text-transform: uppercase;
+    }
+  }
+
+  .composition {
+    width: 250rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
 }

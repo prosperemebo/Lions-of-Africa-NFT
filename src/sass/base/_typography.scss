@@ -12,7 +12,7 @@ body {
   line-height: 1.4;
 
   @include respond(tab-port) {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -44,10 +44,6 @@ body {
 .body-2 {
   font-weight: 400;
   font-size: 1.8rem;
-
-  @include respond(phone) {
-    font-size: 1.6rem;
-  }
 }
 
 .subtitle-1 {
@@ -56,6 +52,6 @@ body {
 }
 
 .subtitle-2 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 2rem;
 }

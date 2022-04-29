@@ -20,6 +20,10 @@
     background-color: $color-secondary;
     transition: background-color 0.3s $bezier-curve;
 
+    &.btn-blue {
+      background-color: $color-blue;
+    }
+
     &:hover {
       background-color: $color-accent;
     }
