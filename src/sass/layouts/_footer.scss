@@ -1,0 +1,63 @@
+.footer {
+  background-color: $color-secondary;
+  padding: 7rem;
+  position: relative;
+
+  @include respond(tab-port) {
+    padding: 7rem 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 12rem 4rem;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .logo {
+      img {
+        width: 20rem;
+
+        @include respond(phone) {
+          width: 25rem;
+        }
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+
+      @include respond(phone) {
+        gap: 5rem;
+      }
+
+      & li {
+        list-style: none;
+
+        a {
+          font-size: 3.5rem;
+          color: $color-primary;
+
+          img {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .credit {
+    color: $color-secondary;
+    position: absolute;
+  }
+}

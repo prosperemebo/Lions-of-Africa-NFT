@@ -31,12 +31,20 @@ body {
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
+}
+
+.custom-link {
+  color: rgba($color-blue, 0.8);
+  text-decoration: underline;
+  padding: 0.5rem;
+  transition: color 0.1s $bezier-curve, background-color 0.1s $bezier-curve;
+
+  &:hover {
+    background-color: rgba($color-blue, 0.1);
+    color: rgba($color-blue, 1);
+  }
 }
 
 ::selection {

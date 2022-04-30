@@ -10,16 +10,16 @@
     text-align: center;
   }
 
-  .desc {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+  // .desc {
+  //   width: 80%;
+  //   margin: 0 auto;
+  //   text-align: center;
 
-    @include respond(phone) {
-      width: 85%;
-      text-align: left;
-    }
-  }
+  //   @include respond(phone) {
+  //     width: 85%;
+  //     text-align: left;
+  //   }
+  // }
 
   .subtitle-2 {
     text-transform: uppercase;

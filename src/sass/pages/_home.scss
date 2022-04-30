@@ -1,12 +1,16 @@
 .description-overview {
   max-width: 120rem;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15rem;
-  padding: 0 5rem;
   text-align: center;
 
+  h4 {
+    text-transform: uppercase;
+  }
+
   @include respond(phone) {
+    width: 85%;
     text-align: left;
   }
 }
@@ -50,11 +54,11 @@
   }
 
   .utilities {
-    width: 80%;
-    margin: 0 auto;
+    margin: 0rem 10rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       width: 85%;
+      margin: 0 auto;
       text-align: left;
     }
 
@@ -97,6 +101,9 @@
     overflow: hidden;
 
     @include respond(tab-port) {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
       width: 100%;
     }
 
@@ -105,6 +112,255 @@
       width: 100%;
       object-fit: cover;
       display: block;
+    }
+  }
+}
+
+.stats-section {
+  padding: 15rem 0 10rem;
+  position: relative;
+
+  @include respond(phone) {
+    padding: 12rem 0 7rem;
+  }
+
+  .vectors {
+    img {
+      position: absolute;
+      width: 3.5rem;
+
+      &.vec-1 {
+        top: 40%;
+        left: 3%;
+
+        @include respond(phone) {
+          top: 3%;
+          width: 2.5rem;
+        }
+      }
+
+      &.vec-2 {
+        bottom: 5%;
+        right: 5%;
+
+        @include respond(phone) {
+          bottom: 3%;
+          right: 5%;
+        }
+      }
+    }
+  }
+
+  .headline {
+    text-transform: uppercase;
+    letter-spacing: 0.64em;
+    padding: 0 2rem;
+
+    @include respond(tab-port) {
+      letter-spacing: normal;
+    }
+  }
+
+  .stats {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0rem 5rem;
+
+    @include respond(phone) {
+      margin-top: 0rem;
+      flex-direction: column;
+    }
+
+    .stat {
+      flex: 1;
+
+      @include respond(phone) {
+        padding: 5rem 0;
+      }
+
+      &.border {
+        .main {
+          border-left: 2px solid $color-secondary;
+          border-right: 2px solid $color-secondary;
+
+          @include respond(phone) {
+            border-left: none;
+            border-right: none;
+          }
+        }
+
+        @include respond(phone) {
+          border-top: 2px solid $color-secondary;
+          border-bottom: 2px solid $color-secondary;
+        }
+      }
+    }
+
+    .main {
+      margin-bottom: 8rem;
+
+      .headline-2 {
+        margin-top: 2rem;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .sub {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.roadmap-section {
+  // margin-top: 10rem;
+  padding-top: 15rem;
+
+  .headline {
+    text-transform: uppercase;
+  }
+
+  .roadmap-dropdown-content {
+    ul,
+    ol {
+      padding: 1.5rem 3rem;
+
+      li {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  .drop-down {
+    i {
+      transition: transform 0.5s $bezier-curve;
+    }
+
+    &.open {
+      .dropdown-toggle {
+        i {
+          transform: rotateZ(180deg);
+          transform-origin: center;
+        }
+      }
+    }
+  }
+}
+
+.team-section {
+  position: relative;
+  background-color: $color-pink;
+  overflow: hidden;
+
+  .vectors {
+    img {
+      position: absolute;
+
+      &.vec-1 {
+        top: -5%;
+        left: -5%;
+        width: 35rem;
+
+        @include respond(tab-port) {
+          width: 25rem;
+        }
+
+        @include respond(phone) {
+          left: -10%;
+          top: -3%;
+        }
+      }
+
+      &.vec-2 {
+        top: 70%;
+        right: 3%;
+        width: 5rem;
+
+        @include respond(phone) {
+          right: 1%;
+        }
+      }
+
+      &.vec-3 {
+        bottom: 5%;
+        left: 2%;
+        width: 7rem;
+
+        @include respond(phone) {
+          bottom: 2%;
+          right: 5%;
+          width: 5rem;
+        }
+      }
+    }
+  }
+
+  .headline-1 {
+    text-transform: uppercase;
+  }
+
+  .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 6rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      width: 85%;
+      gap: 4rem;
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    }
+
+    .member {
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+
+      img {
+        border-radius: 10px;
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.faq-section {
+  .drop-down {
+    margin-bottom: 4rem;
+    padding: 2rem 3rem;
+    cursor: pointer;
+
+    @include respond(phone) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .faq-dropdown-placeholder {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .faq-dropdown-content {
+    ul,
+    ol {
+      padding: 1.5rem 3rem;
+
+      li {
+        padding: 0.5rem 0;
+      }
     }
   }
 }

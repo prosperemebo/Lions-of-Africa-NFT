@@ -31,25 +31,26 @@
 }
 
 .btn-text {
+  &,
   &:link,
   &:visited {
     font-size: $default-font-size;
-    color: $color-primary;
+    color: $color-secondary;
     display: inline-block;
     text-decoration: none;
     border-bottom: 1px solid $color-primary;
-    padding: 3px;
+    padding: 10px 20px;
     transition: all 0.2s;
+    background-color: rgba($color-accent, 0.3);
   }
 
   &:hover {
     color: $color-primary;
-    box-shadow: 0 1rem 2rem rgba($color-secondary, 0.15);
-    transform: translateY(-2px);
+    // transform: translateY(-2px);
   }
 
   &:active {
-    box-shadow: 0 0.5rem 1rem rgba($color-secondary, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba($color-accent, 0.1);
     transform: translateY(0);
   }
 }
