@@ -15,7 +15,7 @@
   .content {
     height: 0;
     overflow-y: hidden;
-    transition: height 0.5s $bezier-curve;
+    transition: height 1s $bezier-curve;
   }
 
   &.open {

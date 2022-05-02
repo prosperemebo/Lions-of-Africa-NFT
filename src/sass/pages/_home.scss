@@ -343,6 +343,19 @@
     padding: 2rem 3rem;
     cursor: pointer;
 
+    i {
+      transition: transform 0.5s $bezier-curve;
+    }
+
+    &.open {
+      .placeholder span {
+        i {
+          transform: rotateZ(180deg);
+          transform-origin: center;
+        }
+      }
+    }
+
     @include respond(phone) {
       margin-bottom: 3rem;
     }
