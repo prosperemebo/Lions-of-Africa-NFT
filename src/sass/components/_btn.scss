@@ -22,6 +22,10 @@
 
     &.btn-blue {
       background-color: $color-blue;
+
+      &:hover {
+        background-color: $color-lightblue;
+      }
     }
 
     &:hover {
